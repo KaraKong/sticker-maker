@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-
 import { Prediction } from "replicate";
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export default function Home() {
