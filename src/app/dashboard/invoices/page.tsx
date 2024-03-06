@@ -1,23 +1,27 @@
-// export default function Page() {
-//     return <p>Invoices Page</p>;
-//   }
+// // export default function Page() {
+// //     return <p>Invoices Page</p>;
+// //   }
 
-import { sql } from "@vercel/postgres";
+// import { sql } from "@vercel/postgres";
 
-export default async function Cart({
-  params
-} : {
-  params: { user: string }
-}): Promise<JSX.Element> {
-  const { rows } = await sql`SELECT * from CARTS where user_id=${params.user}`;
+// export default async function Cart({
+//   params
+// } : {
+//   params: { user: string }
+// }): Promise<JSX.Element> {
+//   const { rows } = await sql`SELECT * from CARTS where user_id=${params.user}`;
 
-  return (
-    <div>
-      {rows.map((row) => (
-        <div key={row.id}>
-          {row.id} - {row.quantity}
-        </div>
-      ))}
-    </div>
-  );
+//   return (
+//     <div>
+//       {rows.map((row) => (
+//         <div key={row.id}>
+//           {row.id} - {row.quantity}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+export default function Page() {
+  return <p>invoices Page</p>;
 }
